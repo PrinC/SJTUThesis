@@ -1,286 +1,471 @@
 %# -*- coding: utf-8-unix -*-
 
-@book{Meta_CN,
-  title = {{电磁超介质及其应用}},
-  address = {北京},
-  publisher = {国防工业出版社},
-  year = {2008},
-  author = {崔万照 and 马伟 and 邱乐徳 and 张洪太},
-  language = {chinese}
+@inproceedings{appaudit,
+ author = {Mingyuan Xia and Lu Gong and Yuanhao Lyu and Zhengwei Qi and Xue Liu},
+ title = {Effective Real-time Android Application Auditing},
+ booktitle = {Proceedings of the 2015 IEEE Symposium on Security and Privacy},
+ series = {SP '15},
+ year = {2015},
+ publisher = {IEEE Computer Society},
+} 
+
+@inproceedings{libscout,
+  title={Reliable Third-Party Library Detection in Android and its Security Applications},
+  author={Backes, Michael and Bugiel, Sven and Derr, Erik},
+  booktitle={Proc. 23rd ACM Conference on Computer and Communication Security (CCS¡¯16), ACM},
+  year={2016},
 }
 
-@book{JohnD,
-  title = {{Photonic Crystals: Molding the Flow of Light}},
-  publisher = {Princeton University Press},
-  year = {2008},
-  author = {Joannopoulos, J. D. and Johnson, S. G. and Winn, J. N.}
+@inproceedings{libradar,
+  title={LibRadar: fast and accurate detection of third-party libraries in Android apps},
+  author={Ma, Ziang and Wang, Haoyu and Guo, Yao and Chen, Xiangqun},
+  booktitle={Proceedings of the 38th International Conference on Software Engineering Companion},
+  pages={653--656},
+  year={2016},
+  organization={ACM},
 }
 
-@book{IEEE-1363,
-  author={{IEEE Std 1363-2000}},
-  title={{IEEE} Standard Specifications for Public-Key Cryptography},
-  address={New York},
-  publisher={IEEE},
-  year={2000}
+@inproceedings{fsquadra,
+    author = {Zhauniarovich, Yury and Gadyatskaya, Olga and Crispo, Bruno and La Spina, Francesco and Moser, Ermanno},
+    title = {{FSquaDRA: Fast Detection of Repackaged Applications}},
+    booktitle = {Proceedings of the 28th Annual IFIP WG 11.3 Working Conference on Data and Applications Security and Privacy},
+    series = {DBSec '14},
+    pages = {131--146},
+    year = {2014},
 }
 
-@article{chen2007act,
-  author = {Chen, H. and Chan, C. T.},
-  title = {{Acoustic cloaking in three dimensions using acoustic metamaterials}},
-  journal = {Applied Physics Letters},
-  year = {2007},
-  volume = {91},
-  pages = {183518},
-  publisher = {AIP}
+@inproceedings{piggybacked,
+ author = {Zhou, Wu and Zhou, Yajin and Grace, Michael and Jiang, Xuxian and Zou, Shihong},
+ title = {Fast, Scalable Detection of "Piggybacked" Mobile Applications},
+ booktitle = {Proceedings of the Third ACM Conference on Data and Application Security and Privacy},
+ series = {CODASPY '13},
+ year = {2013},
+ isbn = {978-1-4503-1890-7},
+ location = {San Antonio, Texas, USA},
+ pages = {185--196},
+ numpages = {12},
+ url = {http://doi.acm.org/10.1145/2435349.2435377},
+ doi = {10.1145/2435349.2435377},
+ acmid = {2435377},
+ publisher = {ACM},
+ address = {New York, NY, USA},
+ keywords = {app repackaging, mobile application, piggybacked application, smartphone security},
+}
+@inproceedings{juxtapp,
+  title={Juxtapp: A scalable system for detecting code reuse among android applications},
+  author={Hanna, Steve and Huang, Ling and Wu, Edward and Li, Saung and Chen, Charles and Song, Dawn},
+  booktitle={International Conference on Detection of Intrusions and Malware, and Vulnerability Assessment},
+  pages={62--81},
+  year={2012},
+  organization={Springer},
 }
 
-@article{chen2007ewi,
-  author = {Chen, H. and Wu, B. I. and Zhang, B. and Kong, J. A.},
-  title = {{Electromagnetic Wave Interactions with a Metamaterial Cloak}},
-  journal = {Physical Review Letters},
-  year = {2007},
-  volume = {99},
-  pages = {63903},
-  number = {6},
-  publisher = {APS}
+@inproceedings{crussell2012attack,
+  title={Attack of the clones: Detecting cloned applications on android markets},
+  author={Crussell, Jonathan and Gibler, Clint and Chen, Hao},
+  booktitle={European Symposium on Research in Computer Security},
+  pages={37--54},
+  year={2012},
+  organization={Springer},
+}
+
+@inproceedings{crussell2013scalable,
+  title={Scalable semantics-based detection of similar android applications},
+  author={Crussell, Jonathan and Gibler, Clint and Chen, Hao},
+  booktitle={Proc. of Esorics},
+  volume={13},
+  year={2013},
+  organization={Citeseer},
+}
+
+@inproceedings{grace2012unsafe,
+  title={Unsafe exposure analysis of mobile in-app advertisements},
+  author={Grace, Michael C and Zhou, Wu and Jiang, Xuxian and Sadeghi, Ahmad-Reza},
+  booktitle={Proceedings of the fifth ACM conference on Security and Privacy in Wireless and Mobile Networks},
+  pages={101--112},
+  year={2012},
+  organization={ACM}
+}
+
+@article{book2013longitudinal,
+  title={Longitudinal analysis of android ad library permissions},
+  author={Book, Theodore and Pridgen, Adam and Wallach, Dan S},
+  journal={arXiv preprint arXiv:1303.0857},
+  year={2013}
+}
+
+@inproceedings{chen2014achieving,
+  title={Achieving accuracy and scalability simultaneously in detecting application clones on android markets},
+  author={Chen, Kai and Liu, Peng and Zhang, Yingjun},
+  booktitle={Proceedings of the 36th International Conference on Software Engineering},
+  pages={175--186},
+  year={2014},
+  organization={ACM}
+}
+
+@inproceedings{flowdroid,
+ author = {Arzt, Steven and Rasthofer, Siegfried and Fritz, Christian and Bodden, Eric and Bartel, Alexandre and Klein, Jacques and Le Traon, Yves and Octeau, Damien and McDaniel, Patrick},
+ title = {FlowDroid: Precise Context, Flow, Field, Object-sensitive and Lifecycle-aware Taint Analysis for Android Apps},
+ booktitle = {Proceedings of the 35th ACM SIGPLAN Conference on Programming Language Design and Implementation},
+ series = {PLDI '14},
+ year = {2013},
+ isbn = {978-1-4503-2784-8},
+ location = {Edinburgh, United Kingdom},
+ pages = {259--269},
+ numpages = {11},
+ doi = {10.1145/2594291.2594299},
+ acmid = {2594299},
+ publisher = {ACM},
+ address = {New York, NY, USA},
+}
+
+@inproceedings{taintdroid,
+ author = {Enck, William and Gilbert, Peter and Chun, Byung-Gon and Cox, Landon P. and Jung, Jaeyeon and McDaniel, Patrick and Sheth, Anmol N.},
+ title = {TaintDroid: An Information-flow Tracking System for Realtime Privacy Monitoring on Smartphones},
+ booktitle = {Proceedings of the 9th USENIX Conference on Operating Systems Design and Implementation},
+ series = {OSDI'10},
+ year = {2010},
+ location = {Vancouver, BC, Canada},
+ pages = {393--407},
+ numpages = {15},
+ url = {http://dl.acm.org/citation.cfm?id=1924943.1924971},
+ acmid = {1924971},
+ publisher = {USENIX Association},
+ address = {Berkeley, CA, USA},
+} 
+
+@inproceedings{aurasium,
+ author = {Xu, Rubin and Sa\"{\i}di, Hassen and Anderson, Ross},
+ title = {Aurasium: Practical Policy Enforcement for Android Applications},
+ booktitle = {Proceedings of the 21st USENIX Conference on Security Symposium},
+ series = {SEC'12},
+ year = {2012},
+ location = {Bellevue, WA},
+ pages = {27--27},
+ numpages = {1},
+ acmid = {2362820},
+ publisher = {USENIX Association},
+ address = {Berkeley, CA, USA},
+}
+
+@inproceedings{appintent,
+ author = {Yang, Zhemin and Yang, Min and Zhang, Yuan and Gu, Guofei and Ning, Peng and Wang, X. Sean},
+ title = {AppIntent: analyzing sensitive data transmission in android for privacy leakage detection},
+ booktitle = {Proceedings of the 2013 ACM SIGSAC conference on Computer \&\#38; communications security},
+ series = {CCS '13},
+ year = {2013},
+ isbn = {978-1-4503-2477-9},
+ location = {Berlin, Germany},
+ pages = {1043--1054},
+ numpages = {12},
+ url = {http://doi.acm.org/10.1145/2508859.2516676},
+ doi = {10.1145/2508859.2516676},
+ acmid = {2516676},
+ publisher = {ACM},
+ address = {New York, NY, USA},
+ keywords = {android security, privacy leakage detection, symbolic execution},
+} 
+@inproceedings{enck:androidsec,
+ author = {Enck, William and Octeau, Damien and McDaniel, Patrick and Chaudhuri, Swarat},
+ title = {A Study of Android Application Security},
+ booktitle = {Proceedings of the 20th USENIX Conference on Security},
+ series = {SEC'11},
+ year = {2011},
+ location = {San Francisco, CA},
+ pages = {21--21},
+ numpages = {1},
+ url = {http://dl.acm.org/citation.cfm?id=2028067.2028088},
+ acmid = {2028088},
+ publisher = {USENIX Association},
+ address = {Berkeley, CA, USA},
+} 
+
+@inproceedings{soot,
+  title={The Soot framework for Java program analysis: a retrospective},
+  author={Lam, Patrick and Bodden, Eric and Lhot{\'a}k, Ondrej and Hendren, Laurie},
+  booktitle={Cetus Users and Compiler Infastructure Workshop (CETUS 2011)},
+  volume={15},
+  pages={35},
+  year={2011}
+}
+
+@inproceedings{droidmoss,
+ author = {Zhou, Wu and Zhou, Yajin and Jiang, Xuxian and Ning, Peng},
+ title = {Detecting Repackaged Smartphone Applications in Third-party Android Marketplaces},
+ booktitle = {Proceedings of the Second ACM Conference on Data and Application Security and Privacy},
+ series = {CODASPY '12},
+ year = {2012},
+ isbn = {978-1-4503-1091-8},
+ location = {San Antonio, Texas, USA},
+ pages = {317--326},
+ numpages = {10},
+ url = {http://doi.acm.org/10.1145/2133601.2133640},
+ doi = {10.1145/2133601.2133640},
+ acmid = {2133640},
+ publisher = {ACM},
+ address = {New York, NY, USA},
+ keywords = {privacy and security, repackaging, smartphones},
+} 
+
+
+@inproceedings{wukong,
+ author = {Wang, Haoyu and Guo, Yao and Ma, Ziang and Chen, Xiangqun},
+ title = {WuKong: A Scalable and Accurate Two-phase Approach to Android App Clone Detection},
+ booktitle = {Proceedings of the 2015 International Symposium on Software Testing and Analysis},
+ series = {ISSTA 2015},
+ year = {2015},
+ isbn = {978-1-4503-3620-8},
+ location = {Baltimore, MD, USA},
+ pages = {71--82},
+ numpages = {12},
+ url = {http://doi.acm.org/10.1145/2771783.2771795},
+ doi = {10.1145/2771783.2771795},
+ acmid = {2771795},
+ publisher = {ACM},
+ address = {New York, NY, USA},
+ keywords = {Android, Clone detection, mobile applications, repackaging, third-party library},
+} 
+
+@inproceedings{boreas,
+ author = {Yuan, Yang and Guo, Yao},
+ title = {Boreas: An Accurate and Scalable Token-based Approach to Code Clone Detection},
+ booktitle = {Proceedings of the 27th IEEE/ACM International Conference on Automated Software Engineering},
+ series = {ASE 2012},
+ year = {2012},
+ isbn = {978-1-4503-1204-2},
+ location = {Essen, Germany},
+ pages = {286--289},
+ numpages = {4},
+ url = {http://doi.acm.org/10.1145/2351676.2351725},
+ doi = {10.1145/2351676.2351725},
+ acmid = {2351725},
+ publisher = {ACM},
+ address = {New York, NY, USA},
+ keywords = {Code clone detection, count matrix, count vector},
+} 
+
+@inproceedings{stevens2012investigating,
+  title={Investigating user privacy in android ad libraries},
+  author={Stevens, Ryan and Gibler, Clint and Crussell, Jon and Erickson, Jeremy and Chen, Hao},
+  booktitle={Workshop on Mobile Security Technologies (MoST)},
+  pages={10},
+  year={2012},
+  organization={Citeseer}
+}
+
+@inproceedings{narayanan2014addetect,
+  title={AdDetect: Automated detection of Android ad libraries using semantic analysis},
+  author={Narayanan, Annamalai and Chen, Lihui and Chan, Chee Keong},
+  booktitle={Intelligent Sensors, Sensor Networks and Information Processing (ISSNIP), 2014 IEEE Ninth International Conference on},
+  pages={1--6},
+  year={2014},
+  organization={IEEE}
+}
+
+@inproceedings{liu2015efficient,
+  title={Efficient privilege de-escalation for ad libraries in mobile apps},
+  author={Liu, Bin and Liu, Bin and Jin, Hongxia and Govindan, Ramesh},
+  booktitle={Proceedings of the 13th Annual International Conference on Mobile Systems, Applications, and Services},
+  pages={89--103},
+  year={2015},
+  organization={ACM}
+}
+
+@inproceedings{pios,
+  title={PiOS: Detecting Privacy Leaks in iOS Applications.},
+  author={Egele, Manuel and Kruegel, Christopher and Kirda, Engin and Vigna, Giovanni},
+  booktitle={NDSS},
+  pages={177--183},
+  year={2011}
+}
+
+@inproceedings{jiang2013detecting,
+  title={Detecting passive content leaks and pollution in android applications},
+  author={Jiang, Yajin Zhou Xuxian},
+  booktitle={Proceedings of the 20th Network and Distributed System Security Symposium (NDSS)},
+  year={2013}
+}
+
+@inproceedings{zhang2013vetting,
+  title={Vetting undesirable behaviors in android apps with permission use analysis},
+  author={Zhang, Yuan and Yang, Min and Xu, Bingquan and Yang, Zhemin and Gu, Guofei and Ning, Peng and Wang, X Sean and Zang, Binyu},
+  booktitle={Proceedings of the 2013 ACM SIGSAC conference on Computer \& communications security},
+  pages={611--622},
+  year={2013},
+  organization={ACM}
+}
+
+@article{seo2016flexdroid,
+  title={FLEXDROID: Enforcing In-App Privilege Separation in Android},
+  author={Seo, Jaebaek and Kim, Daehyeok and Cho, Donghyun and Kim, Taesoo and Shin, Insik},
+  year={2016}
+}
+
+@inproceedings{lee2013pibox,
+  title={$\pi$box: A platform for privacy-preserving apps},
+  author={Lee, Sangmin and Wong, Edmund L and Goel, Deepak and Dahlin, Mike and Shmatikov, Vitaly},
+  booktitle={Presented as part of the 10th USENIX Symposium on Networked Systems Design and Implementation (NSDI 13)},
+  pages={501--514},
+  year={2013}
+}
+
+@inproceedings{shekhar2012adsplit,
+  title={Adsplit: Separating smartphone advertising from applications},
+  author={Shekhar, Shashi and Dietz, Michael and Wallach, Dan S},
+  booktitle={Presented as part of the 21st USENIX Security Symposium (USENIX Security 12)},
+  pages={553--567},
+  year={2012}
 }
 
 
-@inproceedings{kocher99,
-  author={C. Kocher and J. Jaffe and B. Jun},
-  title={Differential Power Analysis},
-  editor={M. Wiener},
-  booktitle={Advances in Cryptology ({CRYPTO}~'99)},
-  series={Lecture Notes in Computer Science},
-  volume={1666},
-  pages={388-397},
-  publisher={Springer-Verlag},
-  month={August},
-  year={1999}
+@inproceedings{pearce2012addroid,
+  title={Addroid: Privilege separation for applications and advertisers in android},
+  author={Pearce, Paul and Felt, Adrienne Porter and Nunez, Gabriel and Wagner, David},
+  booktitle={Proceedings of the 7th ACM Symposium on Information, Computer and Communications Security},
+  pages={71--72},
+  year={2012},
+  organization={ACM}
 }
 
-@incollection{Krasnogor2004e,
-  AUTHOR = {N. Krasnogor},
-  TITLE = {Towards robust memetic algorithms},
-  BOOKTITLE = {Recent Advances in Memetic Algorithms},
-  PUBLISHER = {Springer Berlin Heidelberg},
-  YEAR = {2004},
-  PAGES = {185-207},
-  EDITOR = {W.E. Hart and N. Krasnogor and J.E. Smith},
-  VOLUME = {166},
-  SERIES = {Studies in Fuzziness and Soft Computing},  
-  ADDRESS = {New York},  
+@inproceedings{execute,
+  title={Execute This! Analyzing Unsafe and Malicious Dynamic Code Loading in Android Applications.},
+  author={Poeplau, Sebastian and Fratantonio, Yanick and Bianchi, Antonio and Kruegel, Christopher and Vigna, Giovanni},
+  booktitle={NDSS},
+  volume={14},
+  pages={23--26},
+  year={2014}
 }
 
-@incollection{zjsw,
-  AUTHOR = {班固},
-  TITLE = {苏武传},
-  BOOKTITLE = {传记散文英华},
-  PUBLISHER = {湖北人民出版社},
-  YEAR = {1998},  
-  PAGES = {65-69},
-  EDITOR = {郑在瀛 and 汪超宏 and 周文复},
-  VOLUME = {2},
-  SERIES = {新古文观止丛书},  
-  ADDRESS = {武汉},
-  language = {chinese},
+@inproceedings{droidsafe,
+  title={Information Flow Analysis of Android Applications in DroidSafe.},
+  author={Gordon, Michael I and Kim, Deokhwan and Perkins, Jeff H and Gilham, Limei and Nguyen, Nguyen and Rinard, Martin C},
+  booktitle={NDSS},
+  year={2015},
+  organization={Citeseer}
 }
 
+@inproceedings{eve,
+ author = {Fahl, Sascha and Harbach, Marian and Muders, Thomas and Baumg\"{a}rtner, Lars and Freisleben, Bernd and Smith, Matthew},
+ title = {Why Eve and Mallory Love Android: An Analysis of Android SSL (in)Security},
+ booktitle = {Proceedings of the 2012 ACM Conference on Computer and Communications Security},
+ series = {CCS '12},
+ year = {2012},
+ isbn = {978-1-4503-1651-4},
+ location = {Raleigh, North Carolina, USA},
+ pages = {50--61},
+ numpages = {12},
+ url = {http://doi.acm.org/10.1145/2382196.2382205},
+ doi = {10.1145/2382196.2382205},
+ acmid = {2382205},
+ publisher = {ACM},
+ address = {New York, NY, USA},
+ keywords = {android, apps, mitma, security, ssl},
+} 
 
-@inbook{clzs,
-  AUTHOR = {阎真},
-  TITLE = {沧浪之水},
-  CHAPTER = {大人物还是讲人情的},
-  PAGES = {185-207},
-  PUBLISHER = {人民文学出版社},
-  YEAR = {2001},  
-  language = {chinese},
+
+@inproceedings{topin,
+ author = {Oltrogge, Marten and Acar, Yasemin and Dechand, Sergej and Smith, Matthew and Fahl, Sascha},
+ title = {To Pin or Not to Pin Helping App Developers Bullet Proof Their TLS Connections},
+ booktitle = {Proceedings of the 24th USENIX Conference on Security Symposium},
+ series = {SEC'15},
+ year = {2015},
+ isbn = {978-1-931971-232},
+ location = {Washington, D.C.},
+ pages = {239--254},
+ numpages = {16},
+ url = {http://dl.acm.org/citation.cfm?id=2831143.2831159},
+ acmid = {2831159},
+ publisher = {USENIX Association},
+ address = {Berkeley, CA, USA},
+} 
+
+@inproceedings{rdroid,
+ author = {Backes, Michael and Bugiel, Sven and Derr, Erik and Gerling, Sebastian and Hammer, Christian},
+ title = {R-Droid: Leveraging Android App Analysis with Static Slice Optimization},
+ booktitle = {Proceedings of the 11th ACM on Asia Conference on Computer and Communications Security},
+ series = {ASIA CCS '16},
+ year = {2016},
+ isbn = {978-1-4503-4233-9},
+ location = {Xi'an, China},
+ pages = {129--140},
+ numpages = {12},
+ url = {http://doi.acm.org/10.1145/2897845.2897927},
+ doi = {10.1145/2897845.2897927},
+ acmid = {2897927},
+ publisher = {ACM},
+ address = {New York, NY, USA},
+ keywords = {android, app analysis, constant propagation, mobile security, slice optimization, string analysis},
+} 
+
+
+@inproceedings{amandroid,
+ author = {Wei, Fengguo and Roy, Sankardas and Ou, Xinming and Robby},
+ title = {Amandroid: A Precise and General Inter-component Data Flow Analysis Framework for Security Vetting of Android Apps},
+ booktitle = {Proceedings of the 2014 ACM SIGSAC Conference on Computer and Communications Security},
+ series = {CCS '14},
+ year = {2014},
+ isbn = {978-1-4503-2957-6},
+ location = {Scottsdale, Arizona, USA},
+ pages = {1329--1341},
+ numpages = {13},
+ url = {http://doi.acm.org/10.1145/2660267.2660357},
+ doi = {10.1145/2660267.2660357},
+ acmid = {2660357},
+ publisher = {ACM},
+ address = {New York, NY, USA},
+ keywords = {android application, icc (inter-component communication), information leakage, malware, points-to analysis, security vetting, vulnerable app},
+} 
+
+
+
+@inproceedings{androidleaks,
+ author = {Gibler, Clint and Crussell, Jonathan and Erickson, Jeremy and Chen, Hao},
+ title = {AndroidLeaks: Automatically Detecting Potential Privacy Leaks in Android Applications on a Large Scale},
+ booktitle = {Proceedings of the 5th International Conference on Trust and Trustworthy Computing},
+ series = {TRUST'12},
+ year = {2012},
+ isbn = {978-3-642-30920-5},
+ location = {Vienna, Austria},
+ pages = {291--307},
+ numpages = {17},
+ url = {http://dx.doi.org/10.1007/978-3-642-30921-2_17},
+ doi = {10.1007/978-3-642-30921-2_17},
+ acmid = {2368386},
+ publisher = {Springer-Verlag},
+ address = {Berlin, Heidelberg},
+} 
+
+
+
+@inproceedings{remystified,
+ author = {Wijesekera, Primal and Baokar, Arjun and Hosseini, Ashkan and Egelman, Serge and Wagner, David and Beznosov, Konstantin},
+ title = {Android Permissions Remystified: A Field Study on Contextual Integrity},
+ booktitle = {Proceedings of the 24th USENIX Conference on Security Symposium},
+ series = {SEC'15},
+ year = {2015},
+ isbn = {978-1-931971-232},
+ location = {Washington, D.C.},
+ pages = {499--514},
+ numpages = {16},
+ url = {http://dl.acm.org/citation.cfm?id=2831143.2831175},
+ acmid = {2831175},
+ publisher = {USENIX Association},
+ address = {Berkeley, CA, USA},
 }
 
-@book{tex,
- author    = {Donald E. Knuth},
- title     = {The {\TeX} Book},
- publisher = {Addison-Wesley Publishing Company},
- address   = {Reading, MA},
- year      = 1989,
- edition   = {15th},
+@article{appverify,
+  title={An evaluation of the application verification service in android 4.2.},
+  url={http://www.cs.ncsu.edu/faculty/jiang/appverify/}
 }
 
-@book{companion,
- author    = {Michel Goosens and Frank Mittelbach and Alexander Samarin},
- title     = {The {\LaTeX} Companion},
- publisher = {Addison-Wesley Publishing Company},
- address   = {Reading, MA},
- PAGES = {112--125},
- year      = 1994,
+@article{proguard,
+  title={Introduction to ProGuard},
+  url={http://proguard.sourceforge.net/index.html/},
 }
 
-@article{ELIDRISSI94,
-  AUTHOR =       {{Chafik El Idrissi}, M. and {Roney}, A. and {Frigon}, C. and
-                  {Larzilli{\`e}re}, M.},
-  TITLE =        {Measurements of total kinetic-energy released to the {$N=2$}
-                  dissociation limit of {H}$_2$ --- evidence of the dissociation
-                  of very high vibrational {R}ydberg states of {H}$_2$ by
-                  doubly-excited states},
-  JOURNAL =      {Chemical Physics Letters},
-  PAGES =        {260-266},
-  VOLUME =       224,
-  NUMBER =       10,
-  YEAR =         1994,
+@article{kungfu,
+  title={Security Alert: New Sophisticated Android Malware DroidKungFu Found in Alternative Chinese App Markets},
+  author={Xuxian Jiang},
+  year={2011},
+  url={https://www.csc2.ncsu.edu/faculty/xjiang4/DroidKungFu.html}
 }
-
-@ARTICLE{MELLINGER96,
-  AUTHOR =       {Mellinger, A. and Vidal, C. R. and Jungen, Ch.},
-  TITLE =        {Laser reduced fluorescence study of the carbon-monoxide nd
-                  triplet {R}ydberg series-experimental results and multichannel
-                  quantum-defect analysis},
-  JOURNAL =      {J. Chem. Phys.},
-  PAGES =        {8913-8921},
-  VOLUME =       104,
-  NUMBER =       5,
-  YEAR =         1996,
-}
-
-@ARTICLE{SHELL02,
-  AUTHOR =       {Michael Shell},
-  TITLE =        {How to Use the {IEEEtran \LaTeX} Class},
-  JOURNAL =      {Journal of {\LaTeX} Class Files},
-  YEAR =         2002,
-  VOLUME =       12,
-  NUMBER =       4,
-  PAGES =        {100--120}
-}
-
-@TechReport{NPB2,
-  title =        {The {NAS} Parallel Benchmarks 2.0},
-  author =       {Alex Woo and David Bailey and Maurice Yarrow and Wijngaart
-                  Wijngaart and Tim Harris and William Saphir},
-  year =         1995,
-  month =        dec # {~05},
-  institution =  {The Pennsylvania State University CiteSeer Archives},
-  url =          {http://www.nasa.org/}
-}
-
-@INPROCEEDINGS{DPMG,
-  author =       {Kim, Sangbum and Woo, Namyoon and Yeom, Heon Y. and Park,
-                  Taesoon and Park, Hyoungwoo},
-  title =        {Design and {I}mplementation of {D}ynamic {P}rocess
-                  {M}anagement for {G}rid-enabled {MPICH}},
-  booktitle =    {the 10th European PVM/MPI Users' Group Conference},
-  year =         2003,
-  address =      {Venice, Italy},
-  month =        sep,
-}
-
-@INPROCEEDINGS{cnproceed,
-  author =       {王重阳 and 黄药师 and 欧阳峰 and 洪七公 and 段皇帝},
-  title =        {武林高手论文集},
-  booktitle =    {第~$N$~次华山论剑},
-  year =         2006,
-  address =      {西安, 中国},
-  publisher = {中国古籍出版社},
-  month =        sep,
-  language =     {chinese},
-}
-
-@ARTICLE{cnarticle,
-  AUTHOR =       {贾宝玉 and 林黛玉 and 薛宝钗 and 贾探春},
-  TITLE =        {论刘姥姥食量大如牛之现实意义},
-  JOURNAL =      {红楼梦杂谈},
-  PAGES =        {260--266},
-  VOLUME =       224,
-  YEAR =         1800,
-  LANGUAGE =         {chinese},
-}
-
-@thesis{zhubajie,
-  author =       {猪八戒},
-  title =        {论流体食物的持久保存},
-  school =       {广寒宫大学},
-  year =         2005,
-  address =      {北京},
-  language =     {chinese},
-}
-
-@thesis{shaheshang,
-  title =        {论流沙河的综合治理},
-  author =       {沙和尚},
-  school =       {清华大学},
-  year =         2005,
-  address =      {北京},
-  language =     {chinese},
-}
-
-@thesis{metamori2004,
-  author =       {Ashwin Raju Jeyakumar},
-  title =        {Metamori: A library for Incremental File Checkpointing},
-  school =       {Virgina Tech},
-  year =         2004,
-  month =        jun # {~21},
-  address =      {Blacksburg},
-}
-
-@thesis{FistSystem01,
-  AUTHOR =       {Erez Zadok},
-  TITLE =        {{FiST: A System for Stackable File System Code Generation}},
-  YEAR =         2001,
-  MONTH =        {May},
-  SCHOOL =       {Computer Science Department, Columbia University},
-  ADDRESS =      {USA}
-}
-
-@INBOOK{ColdSources,
-  AUTHOR =       {P. Gr{\"o}ning and L. Nilsson and P. Ruffieux and R.
-                  Clergereaux and O. Gr{\"o}ning},
-  TITLE =        {Encyclopedia of Nanoscience and Nanotechnology},
-  pages =        {547--579},
-  PUBLISHER =    {American Scientific Publishers},
-  YEAR =         2004,
-  volume =       1,
-}
-
-@phdthesis{bai2008,
-	title={{信用风险传染模型和信用衍生品的定价}},
-	author={白云芬},
-	year={2008},
-	language={chinese},
-	school={上海交通大学},
-	address={上海},
-}
-
-
-%萧钰.出版业信息化迈人快车道[EB/OL]. (2001-12-19)[2002-04-15]. http://www.creader.com/news/20011219/200112190019. html.
-@article{xiaoyu2001,
-  author =       {萧钰},
-  title =        {出版业信息化迈人快车道},
-  year =         {2001},
-  TypeofLit =    {EB/OL},
-  modifydate =   {2001-12-19},
-  citedate =     {2002-04-15},
-  url =          {http://www.creader.com/news/20011219/200112190019.html},
-  language =     {chinese},
-}
-
-% 在线析出文献
-@article{CHRISTINE1998,
-  author =       {Christine, Mlot},
-  title =        {Plant physiology: plant biology in the Genome Era},
-  journal =      {Science},
-  volume =       {281},
-  pages =        {331-332},
-  year =         {1998},
-  TypeofLit =    {J/OL},
-  citedate =     {1998-09-23},
-  url =           {http://www.sciencemag.org/cgi/collection/anatmorp},
-}
-
-@book{RManual,
-        Address = {Vienna, Austria},
-        Author = {{R Core Team}},
-        Note = {{ISBN} 3-900051-07-0},
-        Organization = {{R Foundation for Statistical Computing}},
-        title = {R: A Language and Environment for Statistical Computing},
-        url = {http://www.R-project.org/},
-        Year = {2012},
-}
-

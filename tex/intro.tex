@@ -1,165 +1,110 @@
-%# -*- coding: utf-8-unix -*-
-%%==================================================
-%% chapter01.tex for SJTU Master Thesis
-%%==================================================
-
-%\bibliographystyle{sjtu2}%[此处用于每章都生产参考文献]
-\chapter{这是什么}
+\chapter{绪论}
 \label{chap:intro}
 
-这是上海交通大学(非官方)学位论文 \LaTeX 模板，当前版本是 \version 。
+移动互联网随着智能手机的普及爆发，在智能手机上使用应用成为了日常生活中必不可少的部分，应用几乎涵盖了日常生活的所有部分，衣食住行等等都能通过应用来解决。
+正是因为人们对应用的依赖如此之深，应用的安全性成为了各大应用市场需要解决的头号问题。
+本章将首先在~\ref{sec:market-overview}节中介绍移动应用市场，然后~\ref{sec:market-prob}节会对应用市场面临的问题进行阐述与分析，最后在~\ref{sec:intro-conclusion}节中，本文将给出的解决方案进行一个大致的描述。
 
-最早的一版学位模板是一位热心的物理系同学制作的。
-那份模板参考了自动化所学位论文模板，使用了CASthesis.cls文档类，中文字符处理则采用当时最为流行的 \CJKLaTeX 方案。
-我根据交大研究生院对学位论文的要求
-\footnote{\url{http://www.gs.sjtu.edu.cn/policy/fileShow.ahtml?id=130}}
-，结合少量个人审美喜好，完成了一份基本可用的交大 \LaTeX 学位论文模板。
-但是，搭建一个 \CJKLaTeX 环境并不简单，单单在Linux下配置环境和添加中文字体，就足够让新手打退堂鼓。
-在William Wang的建议下，我开始着手把模板向 \XeTeX 引擎移植。
-他完成了最初的移植，多亏了他出色的工作，后续的改善工作也得以顺利进行。
+\section{移动应用市场现状}
+\label{sec:market-overview}
+截止到2016年第三季度, Android系统在全球移动操作系统市场份额中占86.8\%，IOS系统占12.5\%，这两大主流移动操作系统总共占比99.3\%，可以认为是整个市场的全部\footnote{Smartphone OS Market Share, 2016 Q3: \url{http://www.idc.com/prodserv/smartphone-os-market-share.jsp}}。
+在腾讯的2016年微信用户数据报告中，截止2016年第一季度，微信月活跃用户达到6.5亿，覆盖200多个国家。
+在2016年阿里巴巴双十一活动中，总交易额高达1207亿元，其中无线占比达到81.87\%。
+可见移动平台在互联网中占据着重要的位置。
+而应用市场作为应用部署到用户设备上的入口，在移动互联网生态闭环中地位尤其重要。
 
-随着我对 \LaTeX 系统认知增加，我又断断续续做了一些完善模板的工作，在原有硕士学位论文模板的基础上完成了交大学士和博士学位论文模板。
+其中IOS系统是由美国苹果公司开发的移动操作系统，只能运行在苹果公司生产的移动设备上，因此IOS的生态圈都由苹果公司主导。
+IOS应用分发都通过苹果公司自己运营和审查的App Store进行，App Store预先安装在了每个IOS设备上，开发者通过把应用提交到AppStore，
+苹果公司审核通过后用户就可以通过App Store下载安装软件。除此之外还有“PP助手”等第三方应用商店，相比App Store用户量较少。
 
-现在，交大学位论文模板SJTUTHesis代码在github
-\footnote{\url{https://github.com/weijianwen/SJTUThesis}}
-上维护。
-你可以\href{https://github.com/weijianwen/SJTUThesis/issues}{在github上开issue}
-、或者在\href{https://bbs.sjtu.edu.cn/bbsdoc?board=TeX_LaTeX}{水源LaTeX版}发帖来反映遇到的问题。
 
-\section{使用模板}
+对于Android市场情况则复杂的多，Android系统由Google公司主导，并且该操作系统持开放的策略，只要符合“开放手机联盟”的标准，任何公司都可以生产运行Android系统的设备。
+Android生态圈和IOS生态圈最大的区别是去中心化，Android系统允许用户直接使用软件安装包，因此出现许多应用商店。
+在北美以及欧洲地区，由Google公司开发维护的Google Play是最主要也是最权威的Android应用商店，占据了绝大部分用户。
+Google Play市场拥有比较严格的应用审查制度，对新上传的应用会进行自动化的程序安全隐私分析以及病毒检测，同时市场对应用提供的内容有分级（类似于电影分级）并且要求应用开发者提供相应的隐私申明等等。
+在中国，安卓应用下载存在非常多的渠道，从而也存在着各种各样的应用商店，各自提供不同程度的定制服务（例如推送、应用收费服务、推广服务等）。
+然而这也导致中国的Android生态环境异常复杂，市场缺乏统一的、有效的、具有公信力的审查制度。
+在中国Android生态环境中，包含了三类应用商店：一是手机厂商的应用商店，通常在用户手机出厂预装的ROM上就安装好了这一类应用商店的入口，其中以“小米应用商店”为代表，其预装在每一台运行MIUI系统的小米手机上，其他非MIUI系统的Android手机用户可以自行安装“小米应用市场”；二是第三方应用商店，通常是互联网公司的一项业务，其中以“360应用市场”和“腾讯应用宝”为代表，用户安装了“360手机助手”就会被引导进入“360应用市场”下载App，安装了微信的用户也都可以通过微信提供的入口进入“腾讯应用宝”；三是运营商的应用商店，通常出现在合约机的预装软件中，由电信运营商开发维护。
+中国的人口基数大，得益于良好的基础建设，接入互联网的人数众多，手机应用使用用户量巨大。
+如图~\ref{fig:user-scale}所示，根据艾媒咨询《2015-2016中国手机应用商店年度报告》，2015年第四季度共有4.4亿用户在中国使用第三方手机应用商店。
+Android的开放策略加上中国的网络环境因素导致了中国异常复杂的Android生态环境，混乱且缺少监管的生态存在许多安全漏洞，应用商店上恶意的Android应用和第三方库给用户的隐私带来非常重大的安全隐患。
 
-\subsection{准备工作}
-\label{sec:requirements}
+\begin{figure}
+	\centering
+	\includegraphics[width=0.9\textwidth]{figure/user-scale.png}
+	\bicaption[fig:user-scale]{艾媒咨询《2015-2016中国手机应用商店年度报告》}{艾媒咨询《2015-2016中国手机应用商店年度报告》\protect\footnotemark}{Fig}{Annual Report of China Mobile Application Store}
+\end{figure}
+\footnotetext{《2015-2016中国手机应用商店年度报告》\url{http://www.iimedia.cn/40366.html}}
 
-要使用这个模板撰写学位论文，需要在\emph{TeX系统}、\emph{中英文字体}、\emph{TeX技能}上有所准备。
 
-\begin{itemize}[noitemsep,topsep=0pt,parsep=0pt,partopsep=0pt]
-	\item {\TeX}系统：所使用的{\TeX}系统要支持 \XeTeX 引擎，且带有ctex 2.x宏包，以2015年的\emph{完整}TeXLive、MacTeX发行版为佳。
-	\item 中英文字体：操作系统中需要安装\footnote{在Windows、Mac OS X 以及 Linux 上安装额外的字体，可以参考\href{https://www.searchfreefonts.com/articles/how-to-install-fonts.htm}{“How to install fonts?”}。
-}TeX Gyre Termes字体\footnote{\url{http://www.gust.org.pl/projects/e-foundry/tex-gyre/termes}}和四款Adobe中文字体
-\footnote{请从合法渠道获得Adobe字体。}：AdobeSongStd、AdobeKaitiStd、AdobeHeitiStd、AdobeFangsongStd。
-	\item TeX技能：尽管提供了对模板的必要说明，但这不是一份“ \LaTeX 入门文档”。在使用前请先通读其他入门文档。
-	\item 针对Windows用户的额外需求：学位论文模本分别使用git和GNUMake进行版本控制和构建，建议从Cygwin\footnote{\url{http://cygwin.com}}安装这两个工具。
-\end{itemize}
+\section{面临的问题以及解决方案}
+\label{sec:market-prob}
+2015年6月，美国网络安全公司NowSecure发布报告称\footnote{新华网：三星手机被曝存安全漏洞 超6亿用户信息存泄漏隐患。 \url{http://news.xinhuanet.com/finance/2015-06/24/c_127945927.htm}}，预装在三星Galaxy手机上的SwiftKey输入法在更新后，存在可以被黑客利用的安全漏洞。
+被攻击的机器可以允许攻击者控制用户的网络流量，并在手机上留下后门，攻击者可以在手机上执行任意代码。
+并且由于SwiftKey为三星预装软件，所以在非root情况下是无法被卸载的。
+利用这一漏洞，攻击者可以监控用户的网络，使用受害者手机摄像头、窃听通话等危害用户隐私的行为。
+据统计，有超过6亿部三星手机由于该漏洞处于安全威胁之中。
 
-\subsection{模板选项}
-\label{sec:thesisoption}
 
-sjtuthesis提供了一些常用选项，在thesis.tex在导入sjtuthesis模板类时，可以组合使用。
-这些选项包括：
+2015年10月19日，苹果公司（由SourceDNA安全公司提供样本）下架了256款App\footnote{新华网：广告公司涉窥隐私 苹果下架众多应用。 \url{http://news.xinhuanet.com/tech/2015-10/20/c_1116881103.htm}}，原因是这些App都使用了第三方广告库有米SDK，该SDK调用了IOS系统的私有API获取邮件地址、设备认证信息和路由数据等隐私数据。
+根据苹果公司的解释，这些API并不开放给应用使用，有米SDK通过技术手段绕过了App Store的检查，这些使用了有米SDK的应用造成了用户隐私数据的泄露，将无法上架App Store。
+由此可见应用的审查对于应用市场是非常必要而且重要的。
 
-\begin{itemize}[noitemsep,topsep=0pt,parsep=0pt,partopsep=0pt]
-\item 学位类型：bachelor(学位)、master(硕士)、doctor(博士)，是必选项。
-\item 中国字体：adobefonts(Adobe中文字体)、winfonts(使用Windows下的中文字体，该选项未在Linux/Mac下测试)。
-\item 正文字号：cs4size(小四)、c5size(五号)。
-\item 盲审选项：使用review选项后，论文作者、学号、导师姓名、致谢、发表论文和参与项目将被隐去。
-\end{itemize}
 
-\subsection{编译模板}
-\label{sec:process}
+中国工信部曾在微博上公布过2015年第三季度问题应用软件名单，其中35款不良应用榜上有名，其中不乏知名大公司千万级用户量的产品，名单上App的主要涉及强行捆绑安装、未经用户同意收集个人信息、恶意“吸费”等问题。
 
-模板默认使用GNUMake构建，GNUMake将调用latemk工具自动完成模板多轮编译：
+另外，有些违法分子甚至盗用正版应用，并通过技术手段为其增加广告、甚至病毒，最后重新打包发布到应用市场上赚取非法利益。
+通过这种技术重打包的应用通常叫做克隆应用。
+克隆应用的危害在中国尤其严重。
+由于在中国无法使用安卓官方市场Google Play，第三方市场成为了智能手机用户下载应用最主要的方式。
+而第三方市场碎片化严重，监管情况不明，导致克隆应用泛滥。
+之前研究有对百度应用市场进行检测，12442个应用中有1928个应用为疑似克隆应用，比例超过10\%。可见克隆应用问题情况之严重。
 
-\begin{lstlisting}[basicstyle=\small\ttfamily, caption={编译模板}, numbers=none]
-make clean thesis.pdf
-\end{lstlisting}
+Android的权限机制可以在一定程度缓解恶意应用以及隐私泄露问题。
+Android操作系统会在安装应用时告知用户此应用会使用到手机的哪些权限。
+比如App需要连接网络或者获取通讯录，开发者要在App中显示申明需要网络权限和读取通讯录的权限。
+用户在安装Android App的时候，系统会弹窗描述该App需要获取的权限，用户只有允许才能安装使用。
+但是根据相关用户调查，大部分普通用户不会仔细看安装应用时请求的权限。
+甚至一些应用商店安装应用时会跳过这个步骤，直接授予App接触敏感信息的权限，由此造成的问题比如一个手电筒应用能够读取用户通讯录的内容非常普遍。
+而虽然Android 6.0版本使用了运行时授权, 在应用使用到相对敏感的权限时会提醒用户是否允许应用使用此权限，在一定程度上提高了隐私信息的安全性，但是Android系统版本碎片化严重。
+截止2016年5月2日，Android 6.0系统只有7.5\%的装机量，而且动态权限方法无法追踪获取的信息流向，所以并不能完全消除隐私泄露隐患。
 
-若需要生成包含“原创性声明扫描件”的学位论文文档，请将扫描件保存为statement.pdf，然后调用make生成submit.pdf。
+市面上有“360手机卫士”，“腾讯手机管家”等工具App查杀Android手机病毒。
+通常手机病毒会做些诸如劫持支付软件，记录输入的账号密码，自动发送短信的行为，手机病毒查杀工具可以根据这些行为特征进行静态或者动态的安全保护。
 
-\begin{lstlisting}[basicstyle=\small\ttfamily, caption={生成用于提交的学位论文}, numbers=none]
-make clean submit.pdf
-\end{lstlisting}
+但是这些手机病毒查杀工具对于隐私保护的效果甚微，因为隐私泄露没有明显特征。
+例如一个App获取了设备通讯录信息并发送到服务端，查杀工具难以判断这是否是一个恶意的隐私泄露行为，因为诸如微信等App需要通过通讯录信息帮助用户添加好友。
+再例如一个App收集用户的手机号码，在发送到服务端的时候不直接将手机号码放在发送的内容中，而是通过发送1次“a”，3次“b”，5次“c”来表示“135”。
+这种泄露方式难以发现，Android的用户隐私安全受到了极大的威胁。
 
-编译失败时，可以尝试手动逐次编译，定位故障。
+以上事例都生动的说明了应用市场需要对开发者上传的应用进行审核。
+审核过程包括但不仅限于查杀病毒、分析应用是否具有恶意行为以及检查克隆应用等等。
+在进行单应用审计的同时，应用市场还可以综合海量的审计结果，进行分析与预警。
+之前轰动一时的XcodeGhost，就是在编译iOS App时向应用代码中注入了恶意的代码，使得App运行是会收集用户的信息并且上传到攻击者的服务器；
+之前在研究中发现很多病毒也会伪装成正常的包名来躲避安全分析工具的检查，例如病毒DroidKungFu~\supercite{kungfu}就是在感染的app中伪装成\texttt{com.google.update}(Google的应用更新服务库）。
+只要应用市场能够实时监控与分析海量的审计结果，上述病毒的爆发就能即使被发现并制止。
 
-\begin{lstlisting}[basicstyle=\small\ttfamily, caption={手动逐次编译}, numbers=none]
-xelatex -no-pdf thesis
-biber --debug thesis
-xelatex thesis
-xelatex thesis
-\end{lstlisting}
+在应用开发中，通常会使用到第三方库。
+第三方库为开发者提供一个或一组编写好的功能，加速软件开发。
+研究表明第三方库的质量参差不齐，很多广告库会泄露用户的隐私，而最近发生的淘米客和百度SDK事件则更加恶劣，这些SDK中嵌入了远程命令和控制服务器（C\&C服务器），使得目标机器可以接受来自服务器的命令，从而被控制，给外界提供传输恶意命令的平台，危害用户的隐私数据安全。
+即便没有恶意，很多第三方库还会存在很多漏洞，这些漏洞也可能将用户的手机暴露在不安全的环境中。
+同时使用一些可能导致性能问题的第三方库对应用开发者来说也会造成不小的损失。
+所以应用市场可以通过检测应用中是否存在有问题的第三方库，来定位问题库的受害者，并提醒开发者使用经过补丁升级后的第三方库，或者禁止使用有问题的第三方库。
 
-\subsection{模板文件布局}
-\label{sec:layout}
+综上所述目前第三方应用市场对应用的审查与分析还比较有限，主要体现在以下三个方面：隐私问题审核、重打包应用检测以及第三方库检测。
+本文设计的应用审核系统AppShield旨在提供以上功能的同时保证一定的扩展性，使得应用市场能够更加安全，有效。
 
-\begin{lstlisting}[basicstyle=\small\ttfamily,caption={模板文件布局},label=layout,float,numbers=none]
-├── LICENSE
-├── Makefile
-├── README.md
-├── bib
-│   ├── chap1.bib
-│   └── chap2.bib
-├── bst
-│   └── GBT7714-2005NLang.bst
-├── figure
-│   ├── chap2
-│   │   ├── sjtulogo.eps
-│   │   ├── sjtulogo.jpg
-│   │   ├── sjtulogo.pdf
-│   │   └── sjtulogo.png
-│   └── sjtubanner.png
-├── sjtuthesis.cfg
-├── sjtuthesis.cls
-├── statement.pdf
-├── submit.pdf
-├── tex
-│   ├── abstract.tex
-│   ├── ack.tex
-│   ├── app_cjk.tex
-│   ├── app_eq.tex
-│   ├── app_log.tex
-│   ├── chapter01.tex
-│   ├── chapter02.tex
-│   ├── chapter03.tex
-│   ├── conclusion.tex
-│   ├── id.tex
-│   ├── patents.tex
-│   ├── projects.tex
-│   ├── pub.tex
-│   └── symbol.tex
-└── thesis.tex
-\end{lstlisting}
+针对隐私问题审核，AppShield集成了单应用审查工具AppAudit~\supercite{appaudit}，对于单个应用，会使用AppAudit进行分析，检测出隐私泄露威胁；
+同时AppShield会结合整个市场的应用检测结果进行进一步分析，得出市场的隐私泄露概要，以及市场上造成隐私问题最多的组件，并对其进行深度分析。
 
-本节介绍学位论文模板中木要文件和目录的功能。
+针对重打包应用和第三方库检测，AppShield设计了一种应用相似度检测的方法，可以同时应用与以上两种检测中。
+对于每个应用，此方法会进行一次指纹提取，生成应用的指纹信息；
+依据指纹信息进行比对，可以得出应用之间的相似度，从而找出潜在的重打包应用；
+由于相似度检测的方法是基于应用代码的，所以第三方库可以使用dex工具打包成SDK，通过比对此SDK和应用的相似度，即可知道应用是否包含了这个第三方库。
 
-\subsubsection{格式控制文件}
-\label{sec:format}
+在检测应用相似度的工作上，最大的挑战就是混淆。
+而AppShield中使用的方法能够应对大多数情况的混淆方法，使得系统能够检测出使用了混淆技术的重打包应用，使得检测的广度得到了提高。
 
-格式控制文件控制着论文的表现形式，包括以下几个文件：
-sjtuthesis.cfg, sjtuthesis.cls和GBT7714-2005NLang.bst。
-其中，“cfg”和“cls”控制论文主体格式，“bst”控制参考文献条目的格式，
-
-\subsubsection{主控文件thesis.tex}
-\label{sec:thesistex}
-
-主控文件thesis.tex的作用就是将你分散在多个文件中的内容“整合”成一篇完整的论文。
-使用这个模板撰写学位论文时，你的学位论文内容和素材会被“拆散”到各个文件中：
-譬如各章正文、各个附录、各章参考文献等等。
-在thesis.tex中通过“include”命令将论文的各个部分包含进来，从而形成一篇结构完成的论文。
-对模板定制时引入的宏包，建议放在导言区。
-
-\subsubsection{各章源文件tex}
-\label{sec:thesisbody}
-
-这一部分是论文的主体，是以“章”为单位划分的，包括：
-
-\begin{itemize}[noitemsep,topsep=0pt,parsep=0pt,partopsep=0pt]
-	\item 中英文摘要(abstract.tex)。前言(frontmatter)的其他部分，中英文封面、原创性声明、授权信息在sjtuthesis.cls中定义，不单独分离为tex文件。
-不单独弄成文件。
-	\item 正文(mainmatter)——学位论文正文的各章内容，源文件是chapter\emph{xxx}.tex。
-	\item 附录(app\emph{xx}.tex)、致谢(thuanks.tex)、攻读学位论文期间发表的学术论文目录(pub.tex)、个人简历(resume.tex)组成正文后的部分(backmatter)。
-参考文献列表由bibtex插入，不作为一个单独的文件。
-\end{itemize}
-
-\subsubsection{图片文件夹figure}
-\label{sec:fig}
-
-figure文件夹放置了需要插入文档中的图片文件(支持PNG/JPG/PDF/EPS格式的图片)，可以在按照章节划分子目录。
-模板文件中使用\verb|\graphicspath|命令定义了图片存储的顶层目录，在插入图片时，顶层目录名“figure”可省略。
-
-\subsubsection{参考文献数据库bib}
-\label{sec:bib}
-
-目前参考文件数据库目录只存放一个参考文件数据库thesis.bib。
-关于参考文献引用，可参考第\ref{chap:example}章中的例子。
-
+\section{本章小结}
+\label{sec:intro-conclusion}
+本章首先介绍了移动市场繁荣的现状，然后对目前应用市场存在的问题进行了分析与讨论，最后提出了应用市场需要有检测隐私泄露问题、检测重打包应用、检测第三方库三方面的能力，并给出了AppShield解决方案，同时阐述了AppShield多方面的优点。
