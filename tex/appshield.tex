@@ -20,8 +20,10 @@ appaudit.io允许用户上传应用并使用AppAudit进行分析，并将检测�
 
 \begin{figure}
 	\centering
-	\includegraphics{}
+	\includegraphics[width=1\textwidth]{figure/appshield-overview.pdf}
+	\bicaption[fig:appshield-overview]{AppShield系统架构图}{AppShield系统架构图}{Fig}{Overview Architecture of AppShield}
 \end{figure}
+
 
 AppShield分析部分开始先对数据库中每个APK进行文件分析，提取APK文件中提取App信息（例如应用的名称、识别名、版本、代码中每一个类名等等），放入数据库。
 然后（并行地）由AppAudit进行的单App隐私审查，标志出每个App中可以识别的隐私问题。
@@ -83,12 +85,31 @@ AppShield系统的爬虫程序会不断从各个应用市场抓取应用的网�
 幸运的是，许多开发者都为Google Play提供了非官方API和下载模块。
 在本系统中，我们使用 Akdeniz 开发的google-play-crawler，作为Google Play的下载器。它对非官方API进一步封装，我们只需提供应用的包名，它便开始查询并下载应用。
 
+\begin{figure}
+	\centering
+	\includegraphics[width=0.8\textwidth]{figure/myapp-popular.png}
+	\bicaption[fig:myapp-pop]{腾讯应用宝热门应用页面}{腾讯应用宝热门应用页面}{Fig}{Most Popular Apps in Tencent Myapp}
+\end{figure}
+
+\begin{figure}
+	\centering
+	\includegraphics[width=0.6\textwidth]{figure/wechat-detail.png}
+	\bicaption[fig:wechat-detail]{微信在应用宝中的详细页面以及下载链接}{微信在应用宝中的详细页面以及下载链接}{Fig}{Detail Info Page of Wechat in Myapp}
+\end{figure}
+
+
 \subsection{appaudit.io用户上传}
 
 appaudit.io网站为用户提供了使用AppAudit的网站接口。
 网站访问者可以上传APK文件进行审查，审查之后，网站会显示应用的检测结果。
 检测结果包含了应用的基本信息，如应用名、报名、版本、Google Play评分以及应用的隐私泄露行为情况和危险权限使用情况。
 图~\ref{fig:appaudit-sample}为appauditio检测出用户提交程序有恶意行为。
+
+\begin{figure}
+	\centering
+	\includegraphics[width=1\textwidth]{figure/appaudit-sample.png}
+	\bicaption[fig:appaudit-sample]{微信在应用宝中的详细页面以及下载链接}{微信在应用宝中的详细页面以及下载链接}{Fig}{Detail Info Page of Wechat in Myapp}
+\end{figure}
 
 \section{文件分析}
 \label{sec:appshield:file-analyze}
@@ -176,7 +197,11 @@ AppShield使用的单应用审查工具AppAudit的审查结果、第三方库的
 对于混淆应用的处理方法，我们会在下一节中介绍。
 
 
-
+\begin{figure}
+	\centering
+	\includegraphics[width=1\textwidth]{figure/comp-analysis.pdf}
+	\bicaption[fig:comp-analysis]{问题组件分析主要分析过程}{问题组件分析主要分析过程}{Fig}{Analysis Process of Problematic Components}
+\end{figure}
 
 
 如图~\ref{fig:comp-analysis}所示，在问题组件以及比对应用都未被混淆的情况下，AppShield的问题组件识别会进行以下三个步骤：
@@ -203,6 +228,12 @@ AppShield会首先解开DEX文件，将其分解为原来的一个个类文件�
 
 在Java开发过程中，通常会使用第三方库，第三方库一般以一个Jar文件的形式发布，其中包括了多个Java类以及代码，提供库的功能。
 在AppShield中，会将一个Java包认为是一个组件，一个第三方库可能提供多个组件，开发者编写的代码也会有多个组件，AppShield按照组件为粒度区分隐私问题的造成原因，可以输出可读的结果。
+
+\begin{figure}
+	\centering
+	\includegraphics[width=1\textwidth]{figure/pacakge.pdf}
+	\bicaption[fig:package]{用户代码于库代码文件结构编译前后变化}{用户代码于库代码文件结构编译前后变化}{Fig}{File Hierarchy Change of Android Build Process}
+\end{figure}
 
 
 图~\ref{fig:pacakge}展示了（com.example）与两个库（com.google.gson和com.google.protobuf）共同编译产生的最终DEX文件逻辑层次结构。
@@ -253,6 +284,11 @@ ProGuard的输入为应用的jar包，第三方库的jar包，以及ProGuard的�
 ProGuard会根据配置对输入的jar包进行处理，最后将结果写入输出的jar包。
 ProGuard的配置会指定混淆时要使用哪些混淆技术，同时还会根据“keep”规则来指定对哪些包、类或者方法不做处理。
 
+\begin{figure}
+	\centering
+	\includegraphics[width=1\textwidth]{figure/proguard-conf.png}
+	\bicaption[fig:proguard-conf]{ProGuard Android配置样例}{ProGuard Android配置样例}{Fig}{Example of ProGuard Configuration for Android}
+\end{figure}
 
 图~\ref{fig:proguard-conf}为Android构建工具中使用的默认ProGuard配置。
 而之前的混淆检测正是利用这份配置，可以看到在ProGuard默认配置中，只对资源类R的public static值域进行了保留，而在应用自身包内一定会存在R。
